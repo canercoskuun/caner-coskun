@@ -70,7 +70,7 @@ export default function Portfolio() {
 
             <main className="p-10 flex flex-col items-center text-center space-y-8 w-full">
                 <p className="text-lg leading-relaxed text-[#BAC2DE]">
-                    Merhaba! Ben Caner1 Coşkun, İstanbul'da yaşayan bir bilgisayar mühendisliği öğrencisiyim ve Eskişehir Osmangazi Üniversitesi'nde 4. sınıfım. Teknolojiye olan ilgim, sürekli olarak yeni şeyler öğrenmeye ve gelişen alanlarda kendimi daha da geliştirmeye yönlendiriyor. Özellikle yazılım geliştirme ve backend teknolojileri üzerine yoğunlaşıyorum ve bu alanda yenilikçi çözümler üretmeye hevesliyim.
+                    Merhaba! Ben Caner Coşkun, İstanbul'da yaşayan bir bilgisayar mühendisliği öğrencisiyim ve Eskişehir Osmangazi Üniversitesi'nde 4. sınıfım. Teknolojiye olan ilgim, sürekli olarak yeni şeyler öğrenmeye ve gelişen alanlarda kendimi daha da geliştirmeye yönlendiriyor. Özellikle yazılım geliştirme ve backend teknolojileri üzerine yoğunlaşıyorum ve bu alanda yenilikçi çözümler üretmeye hevesliyim.
 
                     Her zaman daha verimli ve etkili sistemler geliştirebilmek için yeni teknolojilere açık, öğrenmeye ve deneyim kazanmaya istekliyim. Java ve Spring Boot gibi güçlü teknolojilerde derinleşmek ve bu alanda profesyonel beceriler kazanmak hedefim. Ayrıca, gelişen bulut teknolojileri ve DevOps süreçleri gibi yenilikçi alanlarda da kendimi sürekli olarak geliştirmekteyim.
 
