@@ -58,18 +58,14 @@ export default function Portfolio() {
     ];
 
     return (
-        <div className="fixed bg-[#1E1E2E] text-[#CDD6F4] min-h-screen transition-all font-sans flex flex-col w-screen h-screen top-[120px] left-0  overflow-auto">
-
-            <header className="p-8 text-center bg-[#313244] rounded-b-2xl w-screen shadow-md fixed top-0 left-0">
-
-
-                <h1 className="text-4xl font-extrabold text-[#F5E0DC]">Caner Coşkun</h1>
-                <p className="text-lg text-[#BAC2DE]">Computer Engineering Student | Software Developer</p>
+        <div className="min-h-screen bg-[#1E1E2E] text-[#CDD6F4] font-sans w-full flex flex-col">
+            <header className="sticky top-0 w-full p-4 sm:p-6 md:p-8 text-center bg-[#313244] shadow-md z-50">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#F5E0DC]">Caner Coşkun</h1>
+                <p className="text-lg sm:text-xl text-[#BAC2DE]">Computer Engineering Student | Software Developer</p>
             </header>
 
-
-            <main className="p-10 flex flex-col items-center text-center space-y-8 w-full">
-                <p className="text-lg leading-relaxed text-[#BAC2DE]">
+            <main className="flex-grow w-full p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8">
+                <p className="text-lg sm:text-xl leading-relaxed text-[#BAC2DE] w-full">
                     Merhaba! Ben Caner Coşkun, İstanbul'da yaşayan bir bilgisayar mühendisliği öğrencisiyim ve Eskişehir Osmangazi Üniversitesi'nde 4. sınıfım. Teknolojiye olan ilgim, sürekli olarak yeni şeyler öğrenmeye ve gelişen alanlarda kendimi daha da geliştirmeye yönlendiriyor. Özellikle yazılım geliştirme ve backend teknolojileri üzerine yoğunlaşıyorum ve bu alanda yenilikçi çözümler üretmeye hevesliyim.
 
                     Her zaman daha verimli ve etkili sistemler geliştirebilmek için yeni teknolojilere açık, öğrenmeye ve deneyim kazanmaya istekliyim. Java ve Spring Boot gibi güçlü teknolojilerde derinleşmek ve bu alanda profesyonel beceriler kazanmak hedefim. Ayrıca, gelişen bulut teknolojileri ve DevOps süreçleri gibi yenilikçi alanlarda da kendimi sürekli olarak geliştirmekteyim.
@@ -78,41 +74,41 @@ export default function Portfolio() {
                 </p>
             </main>
 
-            <section className=" px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full ">
-
-
-                {projects.map((proj, index) => (
-                    <motion.div
-                        key={index}
-                        className="p-6 bg-[#45475A] rounded-2xl shadow-lg transition-transform hover:scale-105 hover:shadow-xl"
-                        whileHover={{ scale: 1.05 }}
-                    >
-                        <h3 className="text-xl font-semibold mb-3 text-[#F5E0DC]">{proj.title}</h3>
-                        <p className="text-[#BAC2DE] mb-4">{proj.description}</p>
-                        <ul className="text-sm text-[#BAC2DE] space-y-2">
-                            {proj.features.map((feature, idx) => (
-                                <li key={idx} className="flex items-center">✔ {feature}</li>
-                            ))}
-                        </ul>
-                        <a href={proj.link} target="_blank" className="block mt-6 text-[#89B4FA] underline text-center">View Project</a>
-                    </motion.div>
-                ))}
+            <section className="flex-grow w-full p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                    {projects.map((proj, index) => (
+                        <motion.div
+                            key={index}
+                            className="bg-[#45475A] rounded-xl shadow-lg p-6 h-full"
+                            whileHover={{ scale: 1.02 }}
+                        >
+                            <h3 className="text-xl sm:text-2xl font-semibold mb-3 text-[#F5E0DC]">{proj.title}</h3>
+                            <p className="text-base sm:text-lg text-[#BAC2DE] mb-4">{proj.description}</p>
+                            <ul className="text-base text-[#BAC2DE] space-y-2">
+                                {proj.features.map((feature, idx) => (
+                                    <li key={idx} className="flex items-start">
+                                        <span className="mr-2 flex-shrink-0">✔</span>
+                                        <span>{feature}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                            <a href={proj.link} target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-[#89B4FA] hover:text-[#B4BEFE] transition-colors">View Project</a>
+                        </motion.div>
+                    ))}
+                </div>
             </section>
 
-
-            <footer className="p-4 flex justify-center gap-6 bg-[#313244] rounded-t-2xl w-screen shadow-inner fixed bottom-0 left-0">
-                <a href="https://github.com/canercoskuun" target="_blank" className="transition-transform hover:scale-110 text-[#89B4FA]">
-                    <FaGithub size={36} />
+            <footer className="w-full p-2 flex justify-center gap-6 bg-[#313244] shadow-inner mt-4">
+                <a href="https://github.com/canercoskuun" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-110 text-[#89B4FA]">
+                    <FaGithub className="w-8 h-8" />
                 </a>
-                <a href="https://www.linkedin.com/in/caner-co%C5%9Fkun-87080b1b4/" target="_blank" className="transition-transform hover:scale-110 text-[#89B4FA]">
-                    <FaLinkedin size={36} />
+                <a href="https://www.linkedin.com/in/caner-co%C5%9Fkun-87080b1b4/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-110 text-[#89B4FA]">
+                    <FaLinkedin className="w-8 h-8" />
                 </a>
-                <a href="https://medium.com/@canercoskun51" target="_blank" className="transition-transform hover:scale-110 text-[#89B4FA]">
-                    <SiMedium size={36} />
+                <a href="https://medium.com/@canercoskun51" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-110 text-[#89B4FA]">
+                    <SiMedium className="w-8 h-8" />
                 </a>
             </footer>
-
-
         </div>
     );
 }
